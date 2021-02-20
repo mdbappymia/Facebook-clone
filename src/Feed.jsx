@@ -9,6 +9,7 @@ function Feed() {
             <StoryReel />
             <MessageSender />
             <Post 
+            username="Bappy Mia"
             profilePic=" https://avatars.githubusercontent.com/u/61800469?s=60&v=4"
             message='hello'
             timestamp='Time'

@@ -1,17 +1,29 @@
 import './App.css';
+import Feed from './Feed';
 import Header from './Header';
-import Feed from './Feed'
-import Sidebar from './Sidebar'
+import Login from './Login';
+import Sidebar from './Sidebar';
+import { useStateValue } from './StateProvider';
+import Widgets from './Widgets';
 function App() {
+    const [{user},dispatch] = useStateValue()
+
     return (
         <div className="app">
-            <Header />
+            {!user?(
+                <Login />
+            ):(
+                <>
+                <Header />
             <div className="app__body">
                 <Sidebar />
                <Feed />
-            {/* Feed */}
+               <Widgets />
             {/* Widgets */}
             </div>
+            </>
+            )}
+            
             
             
         </div>
